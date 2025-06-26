@@ -685,3 +685,11 @@ footer {
 .hidden {
 	display: none;
 }
+
+// Custom Twitter/X icon override for FontAwesome 5.6.3 compatibility
+.socialIconTop.fab.fa-twitter:before {
+	content: "𝕏" !important;
+	font-family: serif !important;
+	font-weight: bold !important;
+	font-style: normal !important;
+}
