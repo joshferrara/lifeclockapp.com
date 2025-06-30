@@ -30,7 +30,126 @@ $feature-icons-background-color: {{ site.feature_icons_background_color }};
 $social-icons-foreground-color: {{ site.social_icons_foreground_color }};
 $social-icons-background-color: {{ site.social_icons_background_color }};
 
+// Dark mode variables
+$dark-body-color: #1a1a1a;
+$dark-header-color: #000000;
+$dark-accent-color: #4a9eff;
+$dark-app-title-color: #ffffff;
+$dark-app-price-color: #ffffff;
+$dark-app-description-color: #e0e0e0;
+$dark-feature-title-color: #ffffff;
+$dark-feature-text-color: #b0b0b0;
+$dark-footer-text-color: #888888;
+$dark-feature-icons-foreground-color: #4a9eff;
+$dark-feature-icons-background-color: #2a2a2a;
+$dark-social-icons-foreground-color: #b0b0b0;
+$dark-social-icons-background-color: #2a2a2a;
+$dark-image-overlay-color: #1a1a1a;
+
 @import 
     "base",
     "layout",
-    "github-markdown"
+    "github-markdown";
+
+// Dark mode media query
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $dark-body-color !important;
+        color: #ffffff;
+    }
+
+    .subPageBody {
+        background-color: $dark-body-color !important;
+    }
+
+    .subPageContainer {
+        background-color: $dark-body-color !important;
+    }
+
+    .subPageHeaderBackground {
+        background-color: $dark-body-color !important;
+    }
+
+    .headerBackground {
+        background-color: rgba($dark-header-color, $header-transparency) !important;
+    }
+
+    .imageWrapper {
+        background: 
+            linear-gradient(
+            rgba($dark-image-overlay-color, $image-overlay-transparency), 
+            rgba($dark-image-overlay-color, $image-overlay-transparency)
+               ),
+            url($header-image);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+
+    // App info colors
+    .appName {
+        color: $dark-app-title-color !important;
+    }
+
+    .appPrice {
+        color: $dark-app-price-color !important;
+    }
+
+    .appDescription {
+        color: $dark-app-description-color !important;
+    }
+
+    // Feature colors
+    .featureText > h3 {
+        color: $dark-feature-title-color !important;
+    }
+
+    .featureText > p {
+        color: $dark-feature-text-color !important;
+    }
+
+    // Footer colors
+    .footerText {
+        color: $dark-footer-text-color !important;
+    }
+
+    // Icon colors
+    .iconBack {
+        color: $dark-feature-icons-background-color !important;
+    }
+
+    .iconTop {
+        color: $dark-feature-icons-foreground-color !important;
+    }
+
+    .socialIconBack {
+        color: $dark-social-icons-background-color !important;
+    }
+
+    .socialIconTop {
+        color: $dark-social-icons-foreground-color !important;
+    }
+
+    // Link colors
+    a:link,
+    a:hover,
+    a:visited,
+    a:active {
+        color: $dark-accent-color !important;
+    }
+
+    // Sub page header styling for dark mode
+    .subPageHeaderBackground .logo > p {
+        color: #ffffff !important;
+    }
+
+    .subPageHeaderBackground nav > ul li a:link,
+    .subPageHeaderBackground nav > ul li a:visited {
+        color: rgba(#ffffff, 0.6) !important;
+    }
+
+    .subPageHeaderBackground nav > ul li a:hover,
+    .subPageHeaderBackground nav > ul li a:active {
+        color: rgba(#ffffff, 1) !important;
+    }
+}
