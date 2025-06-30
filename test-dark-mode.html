@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Test - Life Clock</title>
+    <style>
+        /* Light mode styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .demo-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .feature-icons {
+            display: flex;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1d63ea;
+            background-color: #e6e6e6;
+        }
+
+        .footer-text {
+            color: #666666;
+            margin: 20px 0;
+        }
+
+        /* Dark mode styles using CSS custom properties for easy demonstration */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a !important;
+                color: #ffffff !important;
+            }
+
+            .demo-section {
+                background-color: #2a2a2a !important;
+                border-color: #444 !important;
+                color: #e0e0e0 !important;
+            }
+
+            h1, h2, h3 {
+                color: #ffffff !important;
+            }
+
+            .icon {
+                color: #4a9eff !important;
+                background-color: #2a2a2a !important;
+            }
+
+            .footer-text {
+                color: #888888 !important;
+            }
+
+            a {
+                color: #4a9eff !important;
+            }
+
+            p {
+                color: #b0b0b0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Life Clock - Dark Mode Test</h1>
+    
+    <div class="demo-section">
+        <h2>Automatic Dark Mode Detection</h2>
+        <p>This page demonstrates the automatic dark mode functionality implemented for the Life Clock website. The dark mode is triggered automatically based on your device's system settings using the <code>prefers-color-scheme</code> CSS media query.</p>
+        
+        <h3>Features:</h3>
+        <ul>
+            <li>✅ Automatic detection of user's dark mode preference</li>
+            <li>✅ No manual toggle needed</li>
+            <li>✅ Cool dark background (#1a1a1a) instead of pure black</li>
+            <li>✅ Properly adjusted text colors for readability</li>
+            <li>✅ Icon color adjustments</li>
+            <li>✅ Link color updates</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Color Examples</h2>
+        <div class="feature-icons">
+            <div class="icon">🌟</div>
+            <div class="icon">🚀</div>
+            <div class="icon">💡</div>
+        </div>
+        
+        <p>App description text would appear in a lighter color (#e0e0e0) in dark mode for better readability.</p>
+        <p>Feature text appears in a softer color (#b0b0b0) to maintain hierarchy.</p>
+        
+        <div class="footer-text">
+            Footer text uses a muted color (#888888) appropriate for dark themes.
+        </div>
+        
+        <p><a href="#">Links are styled with a bright blue (#4a9eff)</a> that works well in dark mode.</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>How to Test</h2>
+        <p>To see the dark mode in action:</p>
+        <ol>
+            <li><strong>macOS:</strong> Go to System Preferences → General → Appearance and select "Dark"</li>
+            <li><strong>Windows 10/11:</strong> Go to Settings → Personalization → Colors and select "Dark" under "Choose your color"</li>
+            <li><strong>iOS:</strong> Go to Settings → Display & Brightness and select "Dark"</li>
+            <li><strong>Android:</strong> Go to Settings → Display → Dark theme</li>
+        </ol>
+        <p>The page will automatically switch to dark mode when your system preference is set to dark mode, and switch back to light mode when set to light mode.</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>Implementation Details</h2>
+        <p>The dark mode implementation includes:</p>
+        <ul>
+            <li><strong>Main site styling:</strong> Background colors, text colors, and UI elements</li>
+            <li><strong>GitHub Markdown styling:</strong> Code blocks, tables, and markdown content</li>
+            <li><strong>Feature icons:</strong> Adjusted colors for better contrast</li>
+            <li><strong>Navigation:</strong> Header and navigation link colors</li>
+            <li><strong>Footer:</strong> Appropriate muted colors for dark themes</li>
+        </ul>
+    </div>
+</body>
+</html>
