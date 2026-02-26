@@ -1,3 +1,7 @@
 source "https://rubygems.org"
-gem 'github-pages'
-gem 'webrick'
+
+gem "jekyll", "~> 4.4"
+gem "webrick"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
